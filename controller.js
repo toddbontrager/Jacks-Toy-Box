@@ -1,6 +1,6 @@
 angular.module('OrganizerApp', [])
 
-.controller('ToysController', function($scope){
+.controller('DaysController', function($scope){
   $scope.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 })

@@ -5,11 +5,14 @@
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-<script src="controller.js"></script>
+<script src="../controller.js"></script>
 <body>
 	<h1>Toy Organizer</h1>
-
-	<div>Day</div>
+	<div ng-controller="DaysController">Day
+		<ul>
+			<li ng-repeat="day in days">{{day}}</li>
+		</ul>
+	</div>
 	<div>Toys</div>
 	<div>Add toy</div>
 
