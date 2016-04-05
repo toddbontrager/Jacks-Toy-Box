@@ -12,9 +12,9 @@
 
 	<div ng-controller="DaysController">Day
 		<ul>
-			<li ng-repeat="day in days" ng-click="clicked">
-				<h4 ng-click="showToys = !showToys">{{day.weekday}}</h4>
-				<div ng-show="showToys">{{day.toy}}</div>
+			<li ng-repeat="day in days" ng-click="clicked(day)">
+				<h4 ng-click="showToys = !showToys">{{day}}</h4>
+				<div ng-show="showToys">{{}}</div>
 			</li>
 		</ul>
 	</div>
