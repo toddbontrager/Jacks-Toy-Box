@@ -21,26 +21,8 @@ angular.module('OrganizerApp', [])
   return toyStorage;
 })
 
-.controller('DaysController', function($scope, ToysFactory){
+.controller('WeekController', function($scope, ToysFactory){
   $scope.week = ToysFactory;
-
-  var daySelection = [];
-  var toySelection = [];
-  
-  angular.forEach(ToysFactory, function(value, key){
-   daySelection.push(key);
-  });
-
-  angular.forEach(ToysFactory, function(value){
-    toySelection.push(value);
-  });
-
-  $scope.days = daySelection;
-  $scope.toys = toySelection;
-
-
-//   //i need something so that on click, it passes the info of that particular day to the next function
-
 })
 
 .controller('ToysController', function($scope, ToysFactory){
@@ -49,3 +31,5 @@ angular.module('OrganizerApp', [])
   //   ToysFactory.addOne($scope.??)
   // }
 })
+
+
