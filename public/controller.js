@@ -3,11 +3,11 @@ angular.module('OrganizerApp', [])
 .factory('ToysFactory', function(){
   var toyStorage = {
     Sunday: ['ball','moo cow'],
-    Monday: ['horsey'],
-    Tuesday: ['blocks'],
-    Wednesday: ['lawn mower'],
-    Thursday: ['music truck'],
-    Friday: ['books'],
+    Monday: ['horsey', 'puzzle'],
+    Tuesday: ['blocks', 'drum'],
+    Wednesday: ['lawn mower', 'car'],
+    Thursday: ['music truck', 'rattle'],
+    Friday: ['books', 'soccer ball'],
     Saturday: ['monkey', 'Mr. Lion']
   }
   return toyStorage;

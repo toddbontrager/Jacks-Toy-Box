@@ -9,12 +9,27 @@
 <body>
 
 	<h1>Toy Organizer</h1>
-	
+
 	<div ng-controller="ToysController">
 		<div>Add toy
 			<form novalidate name="toyForm" ng-submit="addToy(weekday, name)">
 				<input type="text" ng-model="name" placeholder="enter toy name here">
-				<input type="text" ng-model="weekday" placeholder="enter a day here">
+				<br>
+				<br>
+
+				 <label for="singleSelect"> Select Day of the Week: </label><br>
+    			<select name="singleSelect" ng-model="weekday">
+      			<option value="Sunday">Sunday</option>
+      			<option value="Monday">Monday</option>
+      			<option value="Tuesday">Tuesday</option>
+      			<option value="Wednesday">Wednesday</option>
+      			<option value="Tuesday">Tuesday</option>
+      			<option value="Wednesday">Wednesday</option>
+    			</select><br>
+    			<br>
+
+				<!-- <input type="text" ng-model="weekday" placeholder="enter a day here"> -->
+
 				<button type="submit">Click To Add</button>
 			</form>
 		</div>
@@ -23,7 +38,7 @@
 	<div ng-controller="WeekController"><h2>Day</h2>
 		<ul>
 			<li ng-repeat="(day, toys) in week" ng-click="clicked">
-				<h3 ng-click="showToys = !showToys">{{day}}</h3>
+				<h4 ng-click="showToys = !showToys">{{day}}</h4>
 				<div ng-repeat="toy in toys" ng-show="showToys">{{toy}}</div>
 			</li>
 		</ul>
