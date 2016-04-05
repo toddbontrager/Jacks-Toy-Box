@@ -3,6 +3,7 @@
 <head>
   <title>Toy Organizer</title>
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 <script src="controller.js"></script>
@@ -11,11 +12,9 @@
 	<h1>Toy Organizer</h1>
 
 	<div ng-controller="ToysController">
-		<div>Add toy
+		<div><label>Add a Toy</label>
 			<form novalidate name="toyForm" ng-submit="addToy(weekday, name)">
-				<input type="text" ng-model="name" placeholder="enter toy name here">
-				<br>
-				<br>
+				<input type="text" ng-model="name" placeholder="enter toy name here"><br><br>
 
 				 <label for="singleSelect"> Select Day of the Week: </label><br>
     			<select name="singleSelect" ng-model="weekday">
@@ -25,11 +24,7 @@
       			<option value="Wednesday">Wednesday</option>
       			<option value="Tuesday">Tuesday</option>
       			<option value="Wednesday">Wednesday</option>
-    			</select><br>
-    			<br>
-
-				<!-- <input type="text" ng-model="weekday" placeholder="enter a day here"> -->
-
+    			</select><br><br>
 				<button type="submit">Click To Add</button>
 			</form>
 		</div>
@@ -43,6 +38,6 @@
 			</li>
 		</ul>
 	</div>
-
+	
 </body>
 </html>
