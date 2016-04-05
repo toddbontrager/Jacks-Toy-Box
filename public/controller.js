@@ -2,7 +2,7 @@ angular.module('OrganizerApp', [])
 
 .factory('ToysFactory', function(){
   var toyStorage = {
-    Sunday: ['ball'],
+    Sunday: ['ball','moo cow'],
     Monday: ['horsey'],
     Tuesday: ['blocks'],
     Wednesday: ['lawn mower'],

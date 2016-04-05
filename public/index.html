@@ -14,7 +14,7 @@
 		<ul>
 			<li ng-repeat="(day, toys) in week" ng-click="clicked">
 				<h4 ng-click="showToys = !showToys">{{day}}</h4>
-				<div ng-show="showToys">{{toys.toString()}}</div>
+				<div ng-repeat="toy in toys" ng-show="showToys">{{toy}}</div>
 			</li>
 		</ul>
 	</div>
