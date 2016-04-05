@@ -13,19 +13,20 @@
 	<div ng-controller="DaysController">Day
 		<ul>
 			<li ng-repeat="day in days" ng-click="clicked">
-				<h4 ng-click="showToys = !showToys">{{day}}</h4>
-				<div ng-show="showToys">(toys for this day)</div>
+				<h4 ng-click="showToys = !showToys">{{day.weekday}}</h4>
+				<div ng-show="showToys">{{day.toy}}</div>
 			</li>
 		</ul>
 	</div>
 
-	<div ng-controller="ToysController">Toys For The Day:</div>
-	<div>Add toy
-		<form name="toyForm" ng-submit="addToy()">
-			<input placeholder="enter toy name here">
-			<input placeholder="enter a day here">
-			<button type="submit">Add</button>
-		</form>
+	<div ng-controller="ToysController">
+		<div>Add toy
+			<form name="toyForm" ng-submit="addToy()">
+				<input placeholder="enter toy name here">
+				<input placeholder="enter a day here">
+				<button type="submit">Add</button>
+			</form>
+		</div>
 	</div>
 
 </body>
