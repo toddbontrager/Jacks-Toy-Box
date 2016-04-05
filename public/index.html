@@ -2,7 +2,7 @@
 <html ng-app="OrganizerApp">
 <head>
   <title>Toy Organizer</title>
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+  <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 <script src="controller.js"></script>
@@ -10,10 +10,10 @@
 
 	<h1>Toy Organizer</h1>
 
-	<div ng-controller="WeekController">Day
+	<div ng-controller="WeekController"><h2>Day</h2>
 		<ul>
 			<li ng-repeat="(day, toys) in week" ng-click="clicked">
-				<h4 ng-click="showToys = !showToys">{{day}}</h4>
+				<h3 ng-click="showToys = !showToys">{{day}}</h3>
 				<div ng-repeat="toy in toys" ng-show="showToys">{{toy}}</div>
 			</li>
 		</ul>
@@ -21,10 +21,10 @@
 
 	<div ng-controller="ToysController">
 		<div>Add toy
-			<form name="toyForm" ng-submit="addToy()">
-				<input placeholder="enter toy name here">
-				<input placeholder="enter a day here">
-				<button type="submit">Add</button>
+			<form novalidate name="toyForm" ng-submit="addToy(weekday, name)">
+				<input type="text" ng-model="name" placeholder="enter toy name here">
+				<input type="text" ng-model="weekday" placeholder="enter a day here">
+				<button type="submit">Click To Add</button>
 			</form>
 		</div>
 	</div>

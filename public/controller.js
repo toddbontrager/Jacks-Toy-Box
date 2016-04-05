@@ -8,15 +8,7 @@ angular.module('OrganizerApp', [])
     Wednesday: ['lawn mower'],
     Thursday: ['music truck'],
     Friday: ['books'],
-    Saturday: ['monkey']
-  }
-
-  var addOne = function(day, toy){
-    if (toyStorage[day] === undefined){
-      toyStorage[day] = [toy]
-    } else {
-    toyStorage[day].push(toy);
-    }
+    Saturday: ['monkey', 'Mr. Lion']
   }
   return toyStorage;
 })
@@ -26,10 +18,9 @@ angular.module('OrganizerApp', [])
 })
 
 .controller('ToysController', function($scope, ToysFactory){
-  $scope.toys = ToysFactory;
-  // $scope.addToy = function(){
-  //   ToysFactory.addOne($scope.??)
-  // }
+  $scope.storage = ToysFactory;
+
+  $scope.addToy = function(weekday, name){
+    $scope.storage[$scope.weekday].push($scope.name);
+  }
 })
-
-
