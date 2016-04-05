@@ -14,7 +14,7 @@ angular.module('OrganizerApp', [])
   var addOne = function(day, toy){
     if (toyStorage[day] === undefined){
       toyStorage[day] = [toy]
-    } else{
+    } else {
     toyStorage[day].push(toy);
     }
   }
@@ -22,8 +22,10 @@ angular.module('OrganizerApp', [])
 })
 
 .controller('DaysController', function($scope, ToysFactory){
-  var toySelection = [];
+  $scope.week = ToysFactory;
+
   var daySelection = [];
+  var toySelection = [];
   
   angular.forEach(ToysFactory, function(value, key){
    daySelection.push(key);
