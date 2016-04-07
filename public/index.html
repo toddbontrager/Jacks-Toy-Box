@@ -8,8 +8,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 <script src="controller.js"></script>
 <body>
-
 	<h1>Toy Organizer</h1>
+
+	<div class="jack"><img src="jack1.jpg" height=25% width=25%></div>
 
 	<div ng-controller="ToysController">
 		<div><label>Add a Toy</label>
@@ -32,12 +33,12 @@
 
 	<div ng-controller="WeekController"><h2>Day</h2>
 		<ul>
-			<li ng-repeat="(day, toys) in week" ng-click="clicked">
+			<li ng-repeat="(day, toys) in week" ng-click="clicked" ng-model="toys">
 				<h4 ng-click="showToys = !showToys">{{day}}</h4>
 				<div ng-repeat="toy in toys" ng-show="showToys">{{toy}}</div>
 			</li>
 		</ul>
 	</div>
-	
+
 </body>
 </html>
